@@ -1,0 +1,63 @@
+/*|#MakVie-SAinte|*/
+
+*, *::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   word-break: break-all;
+}
+
+html {
+   font-size: 100%;
+}
+
+body {
+   background-color: #ffffff;
+   color: #333;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   font-family: serif;
+}
+
+.title {
+   position: relative;
+}
+
+.title span {
+   color: orangered;
+   font-size: 150px;
+   transition: 0.5s;
+   font-weight: 900;
+   will-change: transform;
+   display: inline-block;
+   cursor: pointer;
+}
+
+.s1 span {
+   transform-origin: bottom;
+}
+
+.s2 span {
+   transform-origin: top;
+   transform: translateY(100%) rotateX(-90deg);
+}
+
+.s2 {
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+/* HOVER */
+
+.title:hover .s1 span {
+   transform: translateY(-100%) rotateX(-90deg);
+}
+.title:hover .s2 span {
+   transform: translateY(0%) rotateX(0deg);
+}
+
+/* 925DEV */
